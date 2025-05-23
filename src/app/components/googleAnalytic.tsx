@@ -1,9 +1,11 @@
+'use'
 import Script from 'next/script';
 import { GTM_IDS } from '../models/constants/gtm';
 import { getSubDomainServerSide } from '../../utils/subdomainServerSide';
 
-export const GoogleAnalytics = async () => {
-    const subdomain = await getSubDomainServerSide()
+export const GoogleAnalytics = () => {
+    const subdomain = getSubDomainServerSide()
+    console.log('subDomain: ', subdomain)
     const gtmId =  GTM_IDS[subdomain]
 
     return (

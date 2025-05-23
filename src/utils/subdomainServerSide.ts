@@ -1,10 +1,10 @@
 import { headers } from "next/headers";
 
-export const getSubDomainServerSide = async () => {
+export const getSubDomainServerSide = () => {
 	let subdomain = ''
 	const headersList = headers()
-	const domain = (await headersList).get('host')
-
+	const domain = headersList.get('host')
+    console.log(domain)
 	if (domain) {
 		const urlPaths = domain.split(".");
 		if (urlPaths.length > 2) {

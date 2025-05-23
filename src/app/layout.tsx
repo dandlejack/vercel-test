@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { GoogleAnalytics } from "./components/googleAnalytic";
+import { getSubDomainServerSide } from "@/utils/subdomainServerSide";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,6 +13,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const domain = getSubDomainServerSide()
+  console.log('layout domain:' , domain)
   return (
     <html lang="en">
       <body
