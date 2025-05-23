@@ -7,6 +7,7 @@ export const GoogleAnalytics = () => {
     const subdomain = getSubDomainServerSide()
     console.log('subDomain: ', subdomain)
     const gtmId =  GTM_IDS[subdomain]
+    console.log('gtmId: ', GTM_IDS, gtmId)
 
     return (
         <>

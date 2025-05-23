@@ -4,4 +4,5 @@ export const GTM_IDS: Record<string, string> = {
     id: 'GTM-KV3T645',
     my: 'GTM-KD5853S',
     sg: 'GTM-M9K724H',
+    sooty: 'GTM-W9XB22S',
 };
